@@ -1,2 +1,14 @@
-<h1>{{hero}}</h1>
-<p>{{title}}</p>
+
+<body>
+    <div id="Div_hero">
+        <p>{{hero.name}}</p>
+        <h2>{{hero.name | uppercase }} Details</h2>
+        <div><span>ID:</span>{{hero.id}}</div>
+        <div>
+            <label>Name:
+              <input [(ngModel)]="hero_interface.name" placeholder="name"/>  
+            </label>
+        </div>
+    </div>
+    
+</body>

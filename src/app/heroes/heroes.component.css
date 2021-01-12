@@ -1,4 +1,21 @@
+body{
+    background-color:darkseagreen;
+    border: 3px solid red;
+    padding: 2%;
+   
+}
+
 h1 {
 font-size: 200%;
-border: 2px double red;
+}
+p{
+    font-size: large;
+    
+}
+
+#Div_hero{
+    background-color:cadetblue;
+    margin-bottom: 12px;
+    border: 2px dotted blue;
+    padding: 10px;
 }
