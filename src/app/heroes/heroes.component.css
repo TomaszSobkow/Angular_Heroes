@@ -1,6 +1,6 @@
 body{
     background-color:darkseagreen;
-    border: 3px solid red;
+    border: inset;
     padding: 2%;
    
 }
@@ -16,6 +16,5 @@ p{
 #Div_hero{
     background-color:cadetblue;
     margin-bottom: 12px;
-    border: 2px dotted blue;
     padding: 10px;
 }
