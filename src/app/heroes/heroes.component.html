@@ -1,12 +1,17 @@
 <body>
+
     <h2>
-        <span>My heroes</span>
+        <span>My monsters
+            <script src="src\app\js\day.js"></script>
+        </span>
+        
     </h2>
     <ul class="heroes">
     <li *ngFor="let hero of heroes"
         [class.selected]="hero === selectedHero"
         (click)="onSelect(hero)">
         <span class="badge">{{hero.id}}</span> {{hero.name}}
+        <span class="badgeAddress">{{hero.address}}</span>
     </li>
     </ul>
 
