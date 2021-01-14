@@ -3,13 +3,9 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Monsters": {
+    "testApp": {
       "projectType": "application",
-      "schematics": {
-        "@schematics/angular:application": {
-          "strict": true
-        }
-      },
+      "schematics": {},
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -17,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Monsters",
+            "outputPath": "dist/testApp",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -50,13 +46,13 @@
               "budgets": [
                 {
                   "type": "initial",
-                  "maximumWarning": "500kb",
-                  "maximumError": "1mb"
+                  "maximumWarning": "2mb",
+                  "maximumError": "5mb"
                 },
                 {
                   "type": "anyComponentStyle",
-                  "maximumWarning": "2kb",
-                  "maximumError": "4kb"
+                  "maximumWarning": "6kb",
+                  "maximumError": "10kb"
                 }
               ]
             }
@@ -65,18 +61,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Monsters:build"
+            "browserTarget": "testApp:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "Monsters:build:production"
+              "browserTarget": "testApp:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Monsters:build"
+            "browserTarget": "testApp:build"
           }
         },
         "test": {
@@ -113,16 +109,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "Monsters:serve"
+            "devServerTarget": "testApp:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "Monsters:serve:production"
+              "devServerTarget": "testApp:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "Monsters"
+  "defaultProject": "testApp",
+  "cli": {
+    "analytics": "79ba3868-90e0-4e38-9475-c1fc2ddd7519"
+  }
 }
