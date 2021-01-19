@@ -1,5 +1,18 @@
 /* You can add global styles to this file, and also import other style files */
 /* Application-wide Styles */
+body {
+  margin: 2em;
+  border: 2px double red;
+  border-radius: 12px;
+  padding: 1%;
+  background-color: darkgray;
+}
+#wrapper{
+border: 2px dotted black;
+padding: 2%;
+margin: 3% 1% 1% 1%;
+}
+
 h1 {
   color: #369;
   font-family: Arial, Helvetica, sans-serif;
@@ -10,9 +23,7 @@ h2, h3 {
   font-family: Arial, Helvetica, sans-serif;
   font-weight: lighter;
 }
-body {
-  margin: 2em;
-}
+
 body, input[type="text"], button {
   color: #333;
   font-family: Cambria, Georgia, serif;
