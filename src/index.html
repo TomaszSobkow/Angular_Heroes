@@ -4,41 +4,44 @@
     <meta charset="utf-8">
     <title>Monsters</title>
 
-    <script type = "text/javascript">
-    
-    function clock(){
-      var today = new Date();
+      <script type="text/javascript"> 
 
-      var day = today.getDay();
-      var month = today.getMonth()+1;
-      var year = today.getFullYear();
+      function clock()
+      {
+        var today = new Date();
 
-      var hour = today.getHours();
-      if(hour < 10) hour = "0"+hour;
+        var day = today.getDate();
+        var month = today.getMonth()+1;
+        var year = today.getFullYear();
+        var hour = today.getHours();
+        var minutes = today.getMinutes();
+        var seconds = today.getSeconds();
+          if(hour < 10)hour = "0" + hour;
+          if(minutes < 10) minutes = "0" + minutes;
+          if(seconds < 10) seconds = "0" + seconds
 
-      var minutes = today.getMinutes();
-      if(minutes < 10) minutes = "0"+minutes;
+          var greetning = "-";
+          if(hour > 18) greetning = "Good Evening";
+            else if(hour <12 ) greetning = "Good Morning";
+            else if (hour >12 ) greetning = "Good Afternoon";
+
+          document.getElementById("wrapper").innerHTML = day+"-"+ 
+          month+"-"+year+" | "+ hour+":"+minutes+":"+seconds+
+          " "+ greetning;
+
+        setTimeout("clock()",1000);
+      }
+      </script>
       
-      var seconds = today.getSeconds();
-      if(seconds < 10) seconds = "0"+seconds;
-
-      document.getElementById("timer").innerHTML = 
-            day+"/"+month+"/"+year+" | "+hour+":"+minutes+":"+seconds;
-
-      setTimeout("clock()",1000);
-    }
-    </script>
-    
     <base href="/">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" type="image/x-icon" href="favicon.ico">
   </head>
 
   <body onload="clock();">
-  <div id = "wrapper">
-    <p>wrapper</p>
-    <div id = "timer"></div>
+    
+    <div id = "wrapper"></div>
     <app-root></app-root>
-  </div>
+  
   </body>
 </html>
