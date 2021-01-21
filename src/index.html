@@ -25,11 +25,19 @@
             else if(hour <12 ) greetning = "Good Morning";
             else if (hour >12 ) greetning = "Good Afternoon";
 
-          document.getElementById("wrapper").innerHTML = day+"-"+ 
+          document.getElementById("clock").innerHTML = day+"-"+ 
           month+"-"+year+" | "+ hour+":"+minutes+":"+seconds+
           " "+ greetning;
 
         setTimeout("clock()",1000);
+      }
+
+      function checkText(){
+        var number = document.getElementById("inputText").nodeValue;
+        document.getElementById("efect").innerHTML = number;
+        console.log(number);
+
+
       }
       </script>
       
@@ -39,8 +47,20 @@
   </head>
 
   <body onload="clock();">
+    <div id = "wrapper">
+      <p>wrapper</p>
+
+      <input type = "date"/>
+      <p></p>
+      <input  type="text" id="inputText"/>
+      <input type = "submit" value="check" onclick="checkText()"/>
+
+    </div>
+    <div id ="efect">
+      <p>efect</p>
+    </div>
     
-    <div id = "wrapper"></div>
+    <div id = "clock"></div>
     <app-root></app-root>
   
   </body>

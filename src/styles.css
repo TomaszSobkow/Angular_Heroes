@@ -7,10 +7,11 @@ body {
   padding: 1%;
   background-color: darkgray;
 }
-#wrapper{
-border: 2px dotted black;
+#clock{
+  border-radius: 4px;
 padding: 2%;
 margin: 3% 1% 1% 1%;
+background-color:lightblue;
 }
 
 h1 {
